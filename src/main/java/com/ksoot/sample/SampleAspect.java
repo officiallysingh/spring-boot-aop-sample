@@ -14,8 +14,8 @@ import java.lang.reflect.Method;
 @Component
 class SampleAspect {
 
-  //  @Around("execution (@com.ksoot.TriggerAop * *.*(..))")
-  @Around("@annotation(com.ksoot.TriggerAop)")
+  //  @Around("execution (@com.ksoot.sample.TriggerAop * *.*(..))")
+  @Around("@annotation(com.ksoot.sample.TriggerAop)")
   public Object doLogging(final ProceedingJoinPoint pjp) throws Throwable {
     final Method method = ((MethodSignature) pjp.getSignature()).getMethod();
     final String className = pjp.getTarget().getClass().getSimpleName();

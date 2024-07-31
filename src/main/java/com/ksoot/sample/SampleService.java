@@ -7,7 +7,7 @@ public class SampleService {
 
   @TriggerAop
   public String testMethodOne(final String inputOne) {
-
+    this.testMethodTwo("Input two");
     return "outputOne";
   }
 
